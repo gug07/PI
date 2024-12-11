@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcf0da;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.questionnaire {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #5a5a5a;
+}
+
+/* Estilo das perguntas */
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+.question p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Estilo das opções */
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+/* Estilo dos inputs de rádio */
+input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo do resultado */
+.result {
+    display: none;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.result p {
+    color: #28a745;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .questionnaire {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

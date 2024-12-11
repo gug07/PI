@@ -1,0 +1,346 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* Cabeçalho */
+
+
+
+header {
+    background: #fae6c1; /* Cor do fundo */
+    padding: 10px 20px; /* Reduzi o espaçamento interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha os itens no centro vertical */
+    color: black;
+    height: 100px; /* Define uma altura fixa para o cabeçalho */
+}
+
+.header-logo {
+    max-height: 250px; /* Garante que a logo se ajuste à altura do cabeçalho */
+    width: auto; /* Mantém a proporção */
+}
+
+.header-nav {
+    flex-grow: 1; /* Preenche o espaço restante para centralizar o menu */
+    display: flex;
+    justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+.header-nav a {
+    color: black; /* Mantém o texto preto */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-actions {
+    display: flex; /* Alinha os botões em linha */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+
+.header-nav .dropdown {
+    position: relative;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+.header-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.header-nav .dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.header-nav .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.header-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.header-actions button {
+    background-color: #d8c298;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.header-actions button:hover {
+    background-color: #D085B8; /* Tom um pouco mais escuro do rosa */
+}
+
+/* Estilo da div de busca */
+.box-search {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o input e o botão */
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px; /* Caixa mais fina */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o input */
+.box-search .form-control {
+    border: none;
+    outline: none;
+    padding: 2px 5px; /* Menor espaçamento interno */
+    width: 140px; /* Reduzindo a largura */
+    font-size: 14px;
+}
+
+/* Estilo para o botão de busca */
+.box-search .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: transparent; /* Botão transparente */
+    color: #007bff; /* Ícone azul */
+    border: none; /* Remove a borda */
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Cantos arredondados à direita */
+    transition: color 0.3s ease;
+}
+
+.box-search .btn:hover {
+    color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Botão do carrinho e perfil */
+#cart-button,
+#profile-button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#profile-button {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#profile-button:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+/* Layout do produto */
+#img1 {
+    max-width: 200px;
+}
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 900px;
+    gap: 30px;
+}
+
+.product-container img {
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-container img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+.product-details {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.product-details p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product-details .price {
+    font-size: 24px;
+    color: #2c7;
+    margin: 20px 0;
+}
+
+.product-details form {
+    margin-top: 20px;
+}
+
+.product-details select,
+.product-details button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+.product-details select:hover,
+.product-details button:hover {
+    background-color: #e0e0e0;
+}
+
+.product-details button {
+    background-color: #2c7;
+    color: white;
+    border: none;
+}
+
+.product-details button:hover {
+    background-color: #229;
+}
+
+/* Produtos semelhantes */
+.similar-products {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.similar-products h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.similar-products .carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.similar-products .item {
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.similar-products .item:hover {
+    transform: translateY(-10px); /* Efeito de hover */
+}
+
+.similar-products .item img {
+    max-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.similar-products .item p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.similar-products .item p strong {
+    color: #2c7;
+}
+
+/* Rodapé - Estrutura horizontal */
+footer {
+    background: #fae6c1;
+    color: black;
+    padding: 40px 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-address {
+    margin-bottom: 20px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex; /* Usando Flexbox para alinhar as colunas lado a lado */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 30px; /* Espaço entre as seções */
+}
+
+.footer-column {
+    flex: 1; /* As colunas vão ocupar o mesmo espaço disponível */
+    min-width: 200px; /* Define uma largura mínima para cada coluna */
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Alinha os links na vertical dentro da coluna */
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
