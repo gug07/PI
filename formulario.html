@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Tipo de Cabelo</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+
+<div class="questionnaire">
+    <h2>Descubra Seu Tipo de Cabelo</h2>
+
+    <!-- Pergunta 1 -->
+    <div class="question active" id="question1">
+        <p>Como é o formato natural do seu cabelo quando ele seca naturalmente?</p>
+        <label><input type="radio" name="q1" value="A" onclick="goToQuestion(2)"> A. Completamente liso, sem nenhuma curva ou onda.</label>
+        <label><input type="radio" name="q1" value="B" onclick="goToQuestion(3)"> B. Tem leves ondas em formato de “S”.</label>
+        <label><input type="radio" name="q1" value="C" onclick="goToQuestion(4)"> C. Forma cachos bem definidos.</label>
+        <label><input type="radio" name="q1" value="D" onclick="goToQuestion(5)"> D. É muito crespo, com fios bem fechados em forma de “Z”.</label>
+    </div>
+
+    <!-- Pergunta 2: Para cabelos lisos -->
+    <div class="question" id="question2">
+        <p>Como você descreveria o volume e a espessura do seu cabelo?</p>
+        <label><input type="radio" name="q2" value="1A"> A. Ele é bem fino, sem volume e com tendência a ser oleoso.</label>
+        <label><input type="radio" name="q2" value="1B"> B. Ele tem um leve volume e uma sutil facilidade de modelagem.</label>
+        <label><input type="radio" name="q2" value="1C"> C. Ele é grosso e volumoso, o que torna difícil modelar.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(1)">Voltar</button>
+            <button onclick="goToQuestion(6)">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 3: Para cabelos ondulados -->
+    <div class="question" id="question3">
+        <p>Como são suas ondas e o volume do cabelo?</p>
+        <label><input type="radio" name="q3" value="2A"> A. Ondas leves, em formato de “S” suave, bem sedoso e sem muito volume.</label>
+        <label><input type="radio" name="q3" value="2B"> B. Ondas mais acentuadas em “S”, que podem ter um pouco de frizz.</label>
+        <label><input type="radio" name="q3" value="2C"> C. Ondas bem definidas e soltas, com um pouco mais de volume.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(2)">Voltar</button>
+            <button onclick="goToQuestion(6)">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 4: Para cabelos cacheados -->
+    <div class="question" id="question4">
+        <p>Como você descreveria seus cachos?</p>
+        <label><input type="radio" name="q4" value="3A"> A. Cachos largos e bem formados, com fios mais finos.</label>
+        <label><input type="radio" name="q4" value="3B"> B. Cachos mais estreitos e fechados, com bastante volume e frizz.</label>
+        <label><input type="radio" name="q4" value="3C"> C. Cachos muito fechados e definidos, que começam desde a raiz.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(3)">Voltar</button>
+            <button onclick="goToQuestion(6)">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta 5: Para cabelos crespos -->
+    <div class="question" id="question5">
+        <p>Como é a forma e definição do seu cabelo crespo?</p>
+        <label><input type="radio" name="q5" value="4A"> A. Cachos bem pequenos e fechados, definidos em formato de “Z”.</label>
+        <label><input type="radio" name="q5" value="4B"> B. Cachos fechados, com menos definição, ainda em formato de “Z”.</label>
+        <label><input type="radio" name="q5" value="4C"> C. Cachos muito fechados e sem uma definição clara, em forma de “Z”.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(4)">Voltar</button>
+            <button onclick="goToQuestion(6)">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta Extra 1 sobre Volume -->
+    <div class="question" id="question6">
+        <p>Como é o volume do seu cabelo?</p>
+        <label><input type="radio" name="q6" value="volume_baixo"> A. Pouco volume, os fios são bem finos.</label>
+        <label><input type="radio" name="q6" value="volume_medio"> B. Volume médio, nem muito ralo nem muito grosso.</label>
+        <label><input type="radio" name="q6" value="volume_alto"> C. Muito volume, com fios grossos.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(5)">Voltar</button>
+            <button onclick="goToQuestion(7)">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Pergunta Extra 2 sobre Frizz -->
+    <div class="question" id="question7">
+        <p>Seu cabelo costuma apresentar frizz?</p>
+        <label><input type="radio" name="q7" value="frizz_sim"> A. Sim, especialmente em dias úmidos.</label>
+        <label><input type="radio" name="q7" value="frizz_moderado"> B. Às vezes, mas nada muito exagerado.</label>
+        <label><input type="radio" name="q7" value="frizz_nao"> C. Não, meu cabelo é bem alinhado e liso.</label>
+        <div class="button-group">
+            <button onclick="goToPreviousQuestion(6)">Voltar</button>
+            <button id="btnRecomendacoes" onclick="redirectToRecommendations()">Recomendações de Produtos</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/formulario.js"></script>
+
+</body>
+</html>

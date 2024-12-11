@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <h1>Logo</h1>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- Frente da imagem -->
+                    <div class="flip-card-front">
+                        <img src="img/Cabelo_Brilhoso.jpg" alt="Imagem Frente" class="cabelo-image">
+                    </div>
+                    <!-- Verso da imagem -->
+                    <div class="flip-card-back">
+                        <img src="img/frase.webp" alt="Imagem Verso" class="cabelo-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <input type="text" placeholder="username" id="username" name="username" required>
+                <input type="email" placeholder="email" id="email" name="email" required>
+                <input type="password" placeholder="password" id="password" name="password" required>
+                <!-- Botão de login que submete o formulário -->
+                <button type="submit" class="secondary-button">Entrar</button>
+                <p>Ao se inscrever, você concorda com nossos Termos de Serviço e Política de Privacidade.</p>
+            </form>
+            <a href="cadastro-user.html" class="secondary-button">Cadastrar-se</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Minha Empresa. <a href="termos.html">Termos de Uso</a>. </p>
+    </footer>
+</body>
+</html>
